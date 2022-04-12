@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program");
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the first name(first letter should be capital)");
         String firstName = scanner.next();
@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Enter a password");
         String password = scanner.next();
         String regexPassword = "^(?=.*[0-9])(?=.*[A-Z])(?=[^!@#$%^&+=]*[!@#$%^&+=][^!@#$%^&+=]*$).{8,}$";
-        System.out.println(password.matches(regexPassword));*/
+        System.out.println(password.matches(regexPassword));
 
         Email email = new Email();
         email.checkEmail();
