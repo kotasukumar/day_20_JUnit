@@ -1,69 +1,118 @@
 package com.company;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-class UserRegistrationTest {
+class UserRegistrationTest extends Exception {
         UserRegistration userRegistration = new UserRegistration();
 
     @Test
-    void givenFirstName_WhenValid_ReturnTrue() {
+    void givenFirstName_WhenValid_ReturnTrue() throws ErrorHandle {
         boolean result = userRegistration.firstNameValidation("Sukumar");
-        Assert.assertTrue(result);
+        if (result == true){
+            System.out.println("Valid input please proceed");
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenFirstName_WhenNotProper_ReturnFalse() {
+    void givenFirstName_WhenNotProper_ReturnFalse() throws ErrorHandle {
         boolean result = userRegistration.firstNameValidation("su");
-        Assert.assertFalse(result);
+        if (result == true){
+            System.out.println("Valid input please proceed");
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenLastName_WhenProper_ReturnTrue() {
+    void givenLastName_WhenProper_ReturnTrue() throws ErrorHandle {
         boolean result = userRegistration.lastNameValidation("Kota");
-        Assert.assertTrue(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenName_WhenNotProper_ReturnFalse() {
+    void givenName_WhenNotProper_ReturnFalse() throws ErrorHandle {
         boolean result = userRegistration.lastNameValidation("ko");
-        Assert.assertFalse(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenEmail_WhenProper_ReturnTrue() {
+    void givenEmail_WhenProper_ReturnTrue() throws ErrorHandle {
         boolean result = userRegistration.emailValidation("abc@yahoo.com");
-        Assert.assertTrue(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenEmail_WhenNotProper_ReturnFalse() {
+    void givenEmail_WhenNotProper_ReturnFalse() throws ErrorHandle {
         boolean result = userRegistration.emailValidation("abc@yahoo.com");
-        Assert.assertFalse(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenMobileNumber_WhenProper_ReturnTrue() {
+    void givenMobileNumber_WhenProper_ReturnTrue() throws ErrorHandle {
         boolean result = userRegistration.mobileNumber("91 1111111111");
-        Assert.assertTrue(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenMobileNumber_WhenNotProper_ReturnFalse() {
+    void givenMobileNumber_WhenNotProper_ReturnFalse() throws ErrorHandle {
         boolean result = userRegistration.mobileNumber("91 1111111");
-        Assert.assertFalse(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenPassword_WhenProper_ReturnTrue() {
+    void givenPassword_WhenProper_ReturnTrue() throws ErrorHandle {
         boolean result = userRegistration.password("Suku@123");
-        Assert.assertTrue(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 
     @Test
-    void givenPassword_WhenNotProper_ReturnFalse() {
+    void givenPassword_WhenNotProper_ReturnFalse() throws ErrorHandle {
         boolean result = userRegistration.password("Suk123");
-        Assert.assertFalse(result);
+        if (result == true){
+            System.out.println("Valid input proceed");;
+        }
+        else {
+            throw new ErrorHandle("Invalid Input please enter a valid input");
+        }
     }
 }

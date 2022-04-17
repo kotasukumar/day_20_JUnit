@@ -10,7 +10,7 @@ public class UserRegistration {
 
     public boolean firstNameValidation(String firstName){
         boolean result = firstName.matches(NAME);
-        return  result;
+            return result;
     }
 
     public boolean lastNameValidation(String firstName){
